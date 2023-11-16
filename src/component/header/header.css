@@ -1,0 +1,32 @@
+.sec-header {
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+    border-bottom: 1px solid #ebebe4;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+}
+
+.sec-header input {
+    width: 100%;
+    padding: 13px 0px;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    background-color: #f8f8f8;
+}
+
+.sec-header form {
+    border-radius: 7px;
+    cursor: text;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+
+}
+
+.sec-header button {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+

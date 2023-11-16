@@ -1,0 +1,46 @@
+.small-card .card-img {
+    position: relative;
+
+}
+
+.small-card .card-img::before {
+    content: '';
+    /* background-color: red; */
+    position: absolute;
+    display: block;
+    /* opacity: 0.5; */
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8));
+}
+
+.small-card .rewive::after {
+    content: "\25A3";
+    position: absolute;
+    display: block;
+    bottom: 5px;
+    left: 10px;
+    color: greenyellow;
+}
+
+.small-card img {
+    height: 125px;
+    width: 100%;
+}
+
+.small-card {
+    border-radius: 6px;
+    overflow: hidden;
+    background: #edf4fe;
+
+}
+.small-card span{
+    padding: 0px 2px;
+}
+.small-card h6{
+    font-size: 15px;
+}
+.small-card p{
+    font-size: 13px;
+    margin: 0px;
+}

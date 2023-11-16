@@ -1,0 +1,91 @@
+ [
+    {
+        "image": "/images/items/karam_dosa.webp",
+        "name": "Karam Dosa",
+        "price": "40",
+        "quantity": 20
+    },
+    {
+        "image": "./images/items/egg_dosa.webp",
+        "name": "Egg Dosa",
+        "price": "40",
+        "quantity": 10
+    },
+    {
+        "image": "/images/items/masala_dosa.webp",
+        "name": "Masal Dosa",
+        "price": "40",
+        "quantity": 8
+    },
+    {
+        "image": "/images/items/onion_dosa.webp",
+        "name": "Onion Dosa",
+        "price": "40",
+        "quantity": 20
+    },
+    {
+        "image": "/images/items/plain_dosa.webp",
+        "name": "Plain Dosa",
+        "price": "40",
+        "quantity": 20
+    },
+    {
+        "image": "/images/items/podi_dosa.webp",
+        "name": "Podi Dosa",
+        "price": "40",
+        "quantity": 20
+    },
+    {
+        "image": "/images/items/karam_dosa.webp",
+        "name": "Karam Dosa",
+        "price": "40",
+        "quantity": 20
+    },
+    {
+        "image": "/images/items/egg_dosa.webp",
+        "name": "Egg Dosa",
+        "price": "40",
+        "quantity": 20
+    },
+    {
+        "image": "/images/items/masala_dosa.webp",
+        "name": "Masal Dosa",
+        "price": "40",
+        "quantity": 20
+    },
+    {
+        "image": "/images/items/onion_dosa.webp",
+        "name": "Onion Dosa",
+        "price": "40",
+        "quantity": 20
+    },
+    {
+        "image": "/images/items/plain_dosa.webp",
+        "name": "Plain Dosa",
+        "price": "40",
+        "quantity": 20
+    },
+    {
+        "image": "/images/items/podi_dosa.webp",
+        "name": "Podi Dosa",
+        "price": "40",
+        "quantity": 20
+    },{
+        "image": "/images/items/egg_dosa.webp",
+        "name": "Egg Dosa",
+        "price": "40",
+        "quantity": 20
+    },
+    {
+        "image": "/images/items/masala_dosa.webp",
+        "name": "Masal Dosa",
+        "price": "40",
+        "quantity": 20
+    },
+    {
+        "image": "/images/items/onion_dosa.webp",
+        "name": "Onion Dosa",
+        "price": "40",
+        "quantity": 20
+    }
+]

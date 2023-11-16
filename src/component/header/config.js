@@ -1,0 +1,1 @@
+export  const IMAGES = "./images/header/search.png";

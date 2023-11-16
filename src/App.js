@@ -6,6 +6,7 @@ import Home from "./fecters/home";
 import About from "./fecters/about";
 import Layout from "./layout";
 
+
 function App() {
   return (
     <BrowserRouter>
