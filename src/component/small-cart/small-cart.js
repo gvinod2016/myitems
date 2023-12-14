@@ -23,7 +23,7 @@ export default function SmallCart(props) {
                         <Additem quantity={row.quantity}></Additem>
                     </div>
                 </div>
-            </div >
+            </div>
         </>
     )
 }

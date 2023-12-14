@@ -32,7 +32,14 @@
     border-radius: 6px;
     overflow: hidden;
     background: #edf4fe;
-
+    transform: scale(.9);
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+.small-card:hover{
+    transform: scale(1);
+    box-shadow: 0px 0px 5px #3a3a3ad4;
+    transition: .2s ease-in-out;
 }
 .small-card span{
     padding: 0px 2px;
