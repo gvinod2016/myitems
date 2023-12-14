@@ -1,3 +1,6 @@
-.sec-home{
+.sec-home article{
     font-family: 'Poppins', sans-serif;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 22px;
 }
