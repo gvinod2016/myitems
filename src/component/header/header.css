@@ -12,12 +12,12 @@
     padding: 13px 0px;
     border: none;
     outline: none;
-    border-radius: 7px;
+    border-radius: 25px;
     background-color: #f8f8f8;
 }
 
 .sec-header form {
-    border-radius: 7px;
+    border-radius: 25px;
     cursor: text;
     border: 1px solid rgba(0, 0, 0, 0.04);
 
@@ -28,5 +28,16 @@
     background-color: #28a745;
     border-color: #28a745;
 }
-
-
+.option{
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    background: #ebebe4;
+}
+.sec-header .selet:hover{
+    cursor: pointer;
+}
+.sec-header .selet:hover .option{
+    display: block;
+}
