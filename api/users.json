@@ -1,34 +1,54 @@
 {
-    "user": [
-        {
-            "id": 1,
-            "name": "vinod",
-            "emailId": "vinod@gmail.com",
-            "phoneNo": "6301326070",
-            "password": "user@123",
-            "userType": "user",
-            "createdOn": "2023-12-14 12:36",
-            "modifiedOn": ""
-        },
-        {
-            "id": 2,
-            "name": "prathap",
-            "emailId": "prathap@gmail.com",
-            "phoneNo": "7013790755",
-            "password": "user@123",
-            "userType": "user",
-            "createdOn": "2023-12-14 12:36",
-            "modifiedOn": ""
-        },
-        {
-            "id": 2,
-            "name": "kumarswamy",
-            "emailId": "kumar@gmail.com",
-            "phoneNo": "7989606009",
-            "password": "user@123",
-            "userType": "user",
-            "createdOn": "2023-12-14 12:36",
-            "modifiedOn": ""
-        }
-    ]
+  "user": [
+    {
+      "id": 1,
+      "name": "vinod",
+      "emailId": "vinod@gmail.com",
+      "phoneNo": "6301326070",
+      "password": "user@123",
+      "userType": "user",
+      "createdOn": "2023-12-14 12:36",
+      "modifiedOn": ""
+    },
+    {
+      "id": 2,
+      "name": "prathap",
+      "emailId": "prathap@gmail.com",
+      "phoneNo": "7013790755",
+      "password": "user@123",
+      "userType": "user",
+      "createdOn": "2023-12-14 12:36",
+      "modifiedOn": ""
+    },
+    {
+      "id": 2,
+      "name": "kumarswamy",
+      "emailId": "kumar@gmail.com",
+      "phoneNo": "7989606009",
+      "password": "user@123",
+      "userType": "user",
+      "createdOn": "2023-12-14 12:36",
+      "modifiedOn": ""
+    },
+    {
+      "name": "vinod1",
+      "emailId": "vinod1@gmail.com",
+      "phoneNo": "6301326070",
+      "password": "user@123",
+      "userType": "user",
+      "createdOn": "2023-12-14 12:36",
+      "modifiedOn": "",
+      "id": 3
+    },
+    {
+      "name": "vinod2",
+      "emailId": "vinod1@gmail.com",
+      "phoneNo": "6301326070",
+      "password": "user@123",
+      "userType": "user",
+      "createdOn": "2023-12-14 12:36",
+      "modifiedOn": "",
+      "id": 4
+    }
+  ]
 }

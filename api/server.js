@@ -48,13 +48,38 @@ server.get(USERS, (req, res) => {
 
 const LOGIN = API_URL + '/login'
 
-server.get(LOGIN, (req, res) => {
-    // console.log(DB_USERS_DATA, 'DB_USERS_DATA..')
-    res.jsonp({
-        code: 200,
-        status: 'success',
-        results: DB_USERS_DATA
-    })
+server.post(LOGIN, (req, res) => {
+    const payload = req.body;
+    console.log(payload, 'payload')
+    if (!payload) {
+        res.jsonp({
+            status: 'error',
+            message: 'inputs required',
+            results: []
+        })
+    }
+    const userRow = DB_USERS_DATA.filter((row) => (row.emailId == payload.userId))
+    if (userRow && userRow.length) {
+        if (userRow[0].password == payload.password) {
+            res.jsonp({
+                status: 'success',
+                message: 'lgoin is success',
+                results: userRow[0]
+            })
+        } else {
+            res.jsonp({
+                status: 'error',
+                message: 'password is incorrect',
+                results: []
+            })
+        }
+    } else {
+        res.jsonp({
+            status: 'error',
+            message: 'user id is incorrect',
+            results: []
+        })
+    }
 })
 server.use(jsonServer.rewriter({
     '/api/signup': '/user',
