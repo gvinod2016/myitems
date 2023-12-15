@@ -37,7 +37,7 @@ export default function Header() {
         <>
             <div className="sec-header">
                 <nav className="container px-4 navbar justify-content-between navbar-expand-lg navbar-light">
-                    <Link className="navbar-brand text-dark" to="#">LOGO</Link>
+                    <Link className="navbar-brand text-dark" to="/home">LOGO</Link>
                     <div className="col-6 p-0">
                         <div className="row justify-content-between align-items-center m-0">
                             <div className="col-9 bg-light text-dark p-0">
@@ -60,7 +60,7 @@ export default function Header() {
                     <div className="col-3 p-0" id="navbarSupportedContent">
                         <ul className="navbar-nav justify-content-between">
                             <li className="nav-item active row m-0">
-                                <Link className="nav-link text-dark" to="#">Login</Link>
+                                <Link className="nav-link text-dark" to="signin">Signin</Link>
                                 <div className="selet nav-link text-dark"> Services</div>
                                 <div className="option">
                                     <div>
