@@ -7,11 +7,10 @@ import axios from 'axios';
 
 // css
 import "./home.css"
-import ProductList from "./product-list/product-list";
-import SearchBare from "../../component/search-bare";
+// import ProductList from "./product_list";
 import Tittle from "../../component/tittle";
-import Filterdata from "../../component/filter-data";
 import { useDispatch, useSelector } from 'react-redux'
+import ProductList from "./product_list/product_list";
 
 export default function Home(props) {
     const dispatch = useDispatch()
@@ -29,7 +28,7 @@ export default function Home(props) {
         const url = './mock/items.json'
         axios.get(url).then((res) => {
             const data = res.data;
-            // console.log(data, "mock-data")
+            console.log(data, "mock-data")
             setProductList(data)
             // console.olog(data)
         }).catch((err) => {
@@ -85,6 +84,7 @@ export default function Home(props) {
                                 <>
                                     <div>
                                         <Tittle row={row}></Tittle>
+                                        {/* <ProductList row={row.prodect.slice(0, 6)}></ProductList> */}
                                         <ProductList row={row.prodect.slice(0, 6)}></ProductList>
                                     </div>
                                 </>
