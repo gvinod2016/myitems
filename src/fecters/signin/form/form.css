@@ -1,0 +1,6 @@
+.profile-ts{
+    text-shadow: 1px 3px 3px;
+}
+.profile-height{
+    height: calc(100vh - 80px);
+}
