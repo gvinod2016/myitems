@@ -1,0 +1,10 @@
+{
+    "data":{
+        "results":{
+            "name": "kumar",
+            "emailId": "kumar@gmail.com",
+            "phoneNo": "8979606009",
+            "userType": "user"
+        }
+    }
+}

@@ -60,7 +60,7 @@ export default function Header() {
                     <div className="col-3 p-0" id="navbarSupportedContent">
                         <ul className="navbar-nav justify-content-between">
                             <li className="nav-item active row m-0">
-                                <Link className="nav-link text-dark" to="signin">Signin</Link>
+                                <Link className="nav-link text-dark" to="sign-in">Sign In</Link>
                                 <div className="selet nav-link text-dark"> Services</div>
                                 <div className="option">
                                     <div>
