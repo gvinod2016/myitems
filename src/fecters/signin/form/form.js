@@ -3,7 +3,7 @@ import "./form.css"
 import PropTypes from 'prop-types'
 import { useNavigate } from "react-router-dom";
 
-import { LOGIN_FORM_DATA } from "./config";
+import { LOGIN_FORM_DATA } from "../config";
 
 
 
