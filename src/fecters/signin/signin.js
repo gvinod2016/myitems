@@ -8,9 +8,12 @@ function Signin() {
         console.log('click..login', loginForm)
         loginAPI(loginForm).then((res) => {
             // console.log('res', res)
-            const data = res && res?.data?.results
-            if(data){
-                console.log(data, 'data')
+            const data = res && res?.data
+            if (data?.status == 'success') {
+                const results = data?.results
+                console.log(results, 'results')
+            } else {
+                console.log(data?.message)
             }
         }).catch((err) => {
             console.log(err, 'err')
