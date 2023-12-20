@@ -1,4 +1,4 @@
-.sec-home article{
+.sec-home .col-10{
     font-family: 'Poppins', sans-serif;
     display: grid;
     grid-template-columns: auto auto;

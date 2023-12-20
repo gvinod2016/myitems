@@ -1,18 +1,22 @@
-import { IMAGES } from "./config"
 import { useSelector } from 'react-redux'
 import { Link } from "react-router-dom"
 import { useDispatch } from 'react-redux'
-import "./header.css"
 import { useState } from "react"
+
+import { IMAGES } from "./config"
+
 import { searchBtn } from "../../store/countReducer"
+
+import "./header.css"
+
 
 export default function Header() {
     const [searchVal, setSearchVal] = useState(" ")
     const dispatch = useDispatch()
+
     const countVal = useSelector(state => {
         console.log(state.cart.totalCount, 'state')
-        return state.cart.totalCount
-    })
+        return state.cart.totalCount})
     // const searchData = useSelector(state => {
     //     console.log(state.rootReducers.cart.totalCount, 'state1')
     //     return state.rootReducers.cart.totalCount

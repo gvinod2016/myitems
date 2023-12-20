@@ -1,17 +1,15 @@
 //free difine
 import { useEffect, useState } from "react"
+import { useDispatch, useSelector } from 'react-redux'
 import axios from 'axios';
-import _itemsUserData from '../../mock-data/items.json'
 
-// json config data 
-// import { _items } from "../../../mock/items"
-
-// css
-import "./home.css"
 // import ProductList from "./product_list";
 import Tittle from "../../component/tittle";
-import { useDispatch, useSelector } from 'react-redux'
+import _itemsUserData from '../../mock-data/items.json'
 import ProductList from "./product_list/product_list";
+
+import "./home.css"
+
 
 export default function Home(props) {
     const dispatch = useDispatch()
@@ -22,22 +20,23 @@ export default function Home(props) {
     //     return state
     // })
     const { count, addCount } = props
-    // console.log(count, 'countVal...')
-    const [productList, setProductList] = useState(null)
+    console.log(count, 'countVal...')
+    const url = _itemsUserData
+
+    const [productList, setProductList] = useState(url)
     const [searchData, setSearchData] = useState(null)
     useEffect(() => {
-
-        // console.log( "mock-data...")
-        const url = _itemsUserData
-        axios.get(url).then((res) => {
-            const data = res.data;
-            console.log(data, "mock-data....")
-            // setProductList(data)
-            // // console.olog(data)
-        }).catch((err) => {
-            console.log(err, 'error-data....')
-            // setProductList(err)
-        })
+        // console.log("mock-data...", url)
+        // setProductList(url)
+        // console.log(productList, "productList..")
+        // axios.get(url).then((res) => {
+        //     const data = res.data;
+        //     console.log(data, "mock-data....")
+        //     setProductList(url)
+        //     console.olog(data, "data")
+        // }).catch((err) => {
+        //     console.log(err, 'error-data....')
+        // })
     }, [])
 
     // const onchaigeData = (e) => {
@@ -67,6 +66,7 @@ export default function Home(props) {
     const addCountVal = () => {
         dispatch(addCount(1))
     }
+
     if (!productList) {
         return <div className="text-center">
             <h2>loading....</h2>
@@ -77,7 +77,7 @@ export default function Home(props) {
             <div className="sec-home row m-0 px-5 pb-4">
                 <nav className="nave-bar col-2 ">
                     <h1 onClick={addCountVal}>Ttitle</h1>
-                    {/* <Filterdata></Filterdata>* */}
+                    {/* <Filterdata></Filterdata> */}
                 </nav>
                 <div className="col-10">
                     {/* <SearchBare onchaigeData={onchaigeData} onclickData={onclickData}></SearchBare> */}
@@ -88,7 +88,7 @@ export default function Home(props) {
                                     <div>
                                         <Tittle row={row}></Tittle>
                                         {/* <ProductList row={row.prodect.slice(0, 6)}></ProductList> */}
-                                        <ProductList row={row.prodect.slice(0, 6)}></ProductList>
+                                        <ProductList key={row} row={row.prodect.slice(0, 6)}></ProductList>
                                     </div>
                                 </>
                             )
