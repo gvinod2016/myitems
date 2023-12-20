@@ -61,18 +61,6 @@ export default function Header() {
                         <ul className="navbar-nav justify-content-between">
                             <li className="nav-item active row m-0">
                                 <Link className="nav-link text-dark" to="sign-in">Sign In</Link>
-                                <div className="selet nav-link text-dark"> Services</div>
-                                <div className="option">
-                                    <div>
-                                        <Link to="#">services1</Link>
-                                    </div>
-                                    <div>
-                                        <Link to="#">services1</Link>
-                                    </div>
-                                    <div>
-                                        <Link to="#">services1</Link>
-                                    </div>
-                                </div>
                             </li>
 
                             <div className="col-4 bg-success p-0 rounded">

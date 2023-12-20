@@ -1,3 +1,12 @@
+.login-form {
+    min-height: 31.375rem;
+}
 
-/* .login-form{
-    /* height: calc(100vh - 140px); */
+.login-form span {
+    color: #1877f2;
+    cursor: pointer;
+}
+
+.login-form span:hover {
+    text-decoration: underline;
+}

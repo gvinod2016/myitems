@@ -1,8 +1,16 @@
-.logout-font-sw{
+.signup-form {
+    min-height: 31.375rem;
+}
+.signup-form h4 {
     font-size: 15px;
     font-weight: 600;
     padding: 2px;
 }
-.Proflie-lg{
-        height: calc(100vh - 80px);
+
+.signup-form span {
+    color: #1877f2;
+    cursor: pointer;
+}
+.signup-form span:hover{
+    text-decoration: underline;
 }

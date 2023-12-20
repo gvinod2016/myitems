@@ -1,14 +1,19 @@
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ToastContainer } from 'react-toastify';
+import { Provider } from 'react-redux'
 
-import './App.css';
-import Home from "./fecters/home";
-// import About from "./fecters/about";
 import Layout from "./layout";
 import store from './store'
-import { Provider } from 'react-redux'
-import Signin from "./fecters/signin/signin";
-import Signup from "./fecters/signup/signup";
+import Home from "./fecters/home";
+import Signin from "./fecters/signin";
+import Signup from "./fecters/signup";
+import Forgotpassword from "./fecters/forgot-password";
+
+import 'react-toastify/dist/ReactToastify.css';
+import './App.css';
+
+
 function App() {
   return (
     <BrowserRouter>
@@ -17,15 +22,14 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="home" element={<Home />} />
-            {/* <Route path="about" element={<About />} /> */}
             <Route path="sign-in" element={<Signin />} />
             <Route path="sign-up" element={<Signup />} />
-            <Route path="forgot-password" element={<Signup />} />
-
-            
+            <Route path="forgot-password" element={<Forgotpassword />} />
           </Route>
         </Routes>
       </Provider>
+      <ToastContainer />
+
     </BrowserRouter>
   );
 }

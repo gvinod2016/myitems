@@ -1,6 +1,7 @@
 //free difine
 import { useEffect, useState } from "react"
 import axios from 'axios';
+import _itemsUserData from '../../mock-data/items.json'
 
 // json config data 
 // import { _items } from "../../../mock/items"
@@ -21,19 +22,21 @@ export default function Home(props) {
     //     return state
     // })
     const { count, addCount } = props
-    console.log(count, 'countVal...')
+    // console.log(count, 'countVal...')
     const [productList, setProductList] = useState(null)
     const [searchData, setSearchData] = useState(null)
     useEffect(() => {
-        const url = './mock/items.json'
+
+        // console.log( "mock-data...")
+        const url = _itemsUserData
         axios.get(url).then((res) => {
             const data = res.data;
-            console.log(data, "mock-data")
-            setProductList(data)
-            // console.olog(data)
+            console.log(data, "mock-data....")
+            // setProductList(data)
+            // // console.olog(data)
         }).catch((err) => {
-            console.log(err, 'error-data')
-            setProductList(err)
+            console.log(err, 'error-data....')
+            // setProductList(err)
         })
     }, [])
 
@@ -76,7 +79,7 @@ export default function Home(props) {
                     <h1 onClick={addCountVal}>Ttitle</h1>
                     {/* <Filterdata></Filterdata>* */}
                 </nav>
-                <article className="col-10">
+                <div className="col-10">
                     {/* <SearchBare onchaigeData={onchaigeData} onclickData={onclickData}></SearchBare> */}
                     {
                         productList && productList.map((row) => {
@@ -91,7 +94,7 @@ export default function Home(props) {
                             )
                         })
                     }
-                </article>
+                </div>
             </div>
         </>
     )

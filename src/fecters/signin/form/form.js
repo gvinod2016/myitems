@@ -1,10 +1,12 @@
 import { useState } from "react";
-import "./form.css"
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import { useNavigate } from "react-router-dom";
+import { errorToast, successToast } from "../../../component/toast";
 
 import { LOGIN_FORM_DATA } from "../config";
 
+import 'react-toastify/dist/ReactToastify.css';
+import "./form.css"
 
 
 function Form(props) {
@@ -15,7 +17,6 @@ function Form(props) {
 
     const [loginForm, setLoginForm] = useState(LOGIN_FORM_DATA)
 
-
     const onInputChange = (e) => {
         const inputValue = e && e?.target?.value;
         const inputName = e && e?.target?.name;
@@ -23,14 +24,15 @@ function Form(props) {
             setLoginForm({ ...loginForm, [inputName]: inputValue })
         }
     }
-    
+
     const onSubmitClick = () => {
         if (!loginForm.userId) {
-            alert('user id is requred...')
+            errorToast('user id is requred...')
         } else if (!loginForm.password) {
-            alert('password is requred...')
+            errorToast('password is requred...')
         } else {
             onLoginClick(loginForm)
+            successToast('success')
         }
     }
 
@@ -38,11 +40,15 @@ function Form(props) {
         navigate("/forgot-password");
     }
 
+    const onSignUpClock = () => {
+        navigate("/sign-up");
+    }
+
     return (
         <>
             <div className="login-form p-4">
                 <div className="d-flex justify-content-center align-items-center ">
-                    <div className="  col-5 ">
+                    <div className="col-5">
                         <div className="border px-5 shadow-lg rounded-lg">
                             <div className=" p-3 text-center">
                                 <h3 className="text-success profile-ts rounded-lg">LOGIN IN</h3>
@@ -55,12 +61,13 @@ function Form(props) {
                                 <label className=" text-success"><h5> Password</h5></label>
                                 <input className="col-12 text-success p-2 rounded border-success" type="password" name="password" placeholder="Please enter the password" onChange={onInputChange}></input>
                             </div>
-                            <div><span onClick={onForgotClick}>Forgot Password</span></div>
+                            <div><span onClick={onForgotClick}>Forgot Password?</span></div>
                             <div className="col-12 d-flex justify-content-center py-3">
                                 <button className="col-5 btn bg-success text-white" onClick={onSubmitClick}>Submit</button>
                             </div>
                             <div className=" col-12 signUp d-flex justify-content-center">
-                                <p>Don't have an Account? Sign Up </p>
+                                <p>Don't have an Account?<span onClick={onSignUpClock}> Sign Up</span> </p>
+                                {/* <ToastContainer /> */}
                             </div>
                         </div>
                     </div>
