@@ -26,15 +26,13 @@ function Form(props) {
     }
 
     const onSubmitClick = () => {
-
-        // console.log(forgotForm, "forgotForm")s
-        if (!forgotForm.userid) {
-            errorToast('Place enter Email id or Mobile Number')
-        } else if (forgotForm.userid.match('@gmail.com')) {
-            onForgotClick(forgotForm)
-            successToast('OTP sent to Your Mobile Number')
+        if (!forgotForm.phoneno) {
+            console.log(forgotForm,"pppp")
+            errorToast("Please enter a Phone Number")
+        } else if (!forgotForm.phoneno.match("^[0-9]{10}$")) {
+            errorToast('Please enter a valid Phone Number')
         } else {
-            errorToast("Please enter a valid email")
+            onForgotClick(forgotForm)
         }
     }
     const onCloseClick = () => {
@@ -51,7 +49,7 @@ function Form(props) {
                         <div className='px-4'>
                             <div>
                                 <h6 className='mb-3'>Please enter your email address or mobile number to search for your account.</h6>
-                                <input className="col-12 text-success p-2 rounded border-success" name="userid" type="text" placeholder="Email address or mobile number" onChange={onInputChange}></input>
+                                <input className="col-12 text-success p-2 rounded border-success" name="phoneno" type="text" placeholder="Email address or mobile number" onChange={onInputChange}></input>
                             </div>
                             <div>
                                 <div className="d-flex justify-content-end py-3">

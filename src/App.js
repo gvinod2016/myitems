@@ -5,10 +5,10 @@ import { Provider } from 'react-redux'
 
 import Layout from "./layout";
 import store from './store'
-import Home from "./fecters/home";
-import Signin from "./fecters/signin";
-import Signup from "./fecters/signup";
-import Forgotpassword from "./fecters/forgot-password";
+import Home from "./feature/home";
+import Signin from "./feature/signin";
+import Signup from "./feature/signup";
+import Forgotpassword from "./feature/forgot-password";
 
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';

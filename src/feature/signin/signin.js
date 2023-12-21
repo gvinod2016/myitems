@@ -1,6 +1,6 @@
 import Form from "./form"
 import { loginAPI } from "./data"
-import { errorToast } from "../../component/toast"
+import { errorToast, successToast } from "../../component/toast"
 
 
 import "./signin.css"
@@ -13,6 +13,7 @@ function Signin() {
             const data = res && res?.data
             if (data?.status == 'success') {
                 const results = data?.results
+                successToast('success')
                 console.log(results, 'results_signin')
             } else {
                 errorToast('User account not created')

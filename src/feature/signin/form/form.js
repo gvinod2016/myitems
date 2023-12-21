@@ -1,6 +1,7 @@
 import { useState } from "react";
 import PropTypes from 'prop-types';
 import { useNavigate } from "react-router-dom";
+import validator from 'validator'
 import { errorToast, successToast } from "../../../component/toast";
 
 import { LOGIN_FORM_DATA } from "../config";
@@ -27,12 +28,13 @@ function Form(props) {
 
     const onSubmitClick = () => {
         if (!loginForm.userId) {
-            errorToast('user id is requred...')
+            errorToast('Please enter a Email Id')
+        } else if (!validator.isEmail(loginForm.userId)) {
+            errorToast("Please enter a valid Email Id")
         } else if (!loginForm.password) {
-            errorToast('password is requred...')
+            errorToast('please enter a Password')
         } else {
             onLoginClick(loginForm)
-            successToast('success')
         }
     }
 

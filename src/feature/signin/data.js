@@ -22,3 +22,8 @@ export const loginAPI = (data) => {
 
     return axios.post(url, data)
 }
+
+
+const initialState = {
+    userData: null
+}

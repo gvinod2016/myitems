@@ -26,40 +26,30 @@ function Form(props) {
             setSignupForm({ ...signupForm, [inputName]: inputValue })
         }
     }
-
-    const validate = (signupForm) => {
-        if (validator.isStrongPassword(signupForm.password, { minLength: 8, minLowercase: 1, minUppercase: 1, minNumbers: 1, minSymbols: 1 })) {
-            if (signupForm.password == signupForm.conformpass) {
-                const { conformpass, ...rest } = signupForm
-                onSignupBtn(rest)
-            } else {
-                errorToast('Conform password did not match')
-            }
-        } else {
-            errorToast('Is Not Strong Password')
-        }
-    }
+    
     const onSignupclick = () => {
         if (signupForm) {
             if (!signupForm.fullname) {
-                errorToast("Please enter a full name")
-                console.log(signupForm.fullname)
+                errorToast("Please enter a Full Name")
             } else if (!signupForm.phoneno) {
-                errorToast("Please enter a phone number")
+                errorToast("Please enter a Phone Number")
+            } else if (!signupForm.phoneno.match("^[0-9]{10}$")) {
+                errorToast('Please enter a valid Phone Number')
             } else if (!signupForm.email) {
-                errorToast("Please enter a email id")
+                errorToast("Please enter a Email Id")
+            } else if (!validator.isEmail(signupForm.email)) {
+                errorToast("Please enter a valid Email Id")
             } else if (!signupForm.password) {
-                errorToast("Please enter a password number")
+                errorToast("Please enter a Password")
+            } else if (!validator.isStrongPassword(signupForm.password)) {
+                errorToast("Please enter a minLength: 8, minLowercase: 1, minUppercase: 1, minNumbers: 1, minSymbols: 1 ")
             } else if (!signupForm.conformpass) {
-                errorToast("Please enter a confpassword")
-            } else if (signupForm.phoneno.length == 10) {
-                if (signupForm.email.match('@gmail.com')) {
-                    validate(signupForm)
-                } else {
-                    errorToast("Please enter a valid email")
-                }
+                errorToast("Please enter a Confpassword")
+            } else if (signupForm.password == signupForm.conformpass) {
+                const { conformpass, ...rest } = signupForm
+                onSignupBtn(rest)
             } else {
-                errorToast("Please enter a valid phone number")
+                errorToast("Conform password did not match")
             }
         } else {
             errorToast("Please fill the details")
